@@ -5,9 +5,13 @@
 <mapper namespace="com.example.demo.dao.TestDao">
 
 <!--     void insertClass(ClassNo classNo); -->
-    <insert id="insertClass" parameterType="com.example.demo.pojo.ClassNo">
+    <insert id="insertClass" parameterType="com.example.demo.pojo.ClassNo" keyProperty="id" useGeneratedKeys="true">
        insert into class(c_name,c_teacher) values (#{className},#{classTeacher})
     </insert>
 
+<!--    void insertStudent(Student student);-->
+    <insert id="insertStudent" parameterType="com.example.demo.pojo.Student">
+        insert into student(c_id,stu_name,hobby) values (#{id},#{name},#{hobby})
+    </insert>
 </mapper>
 

@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class ClassNo {
 
-    private int id;
+    private String id;
 
     private String className;
 
